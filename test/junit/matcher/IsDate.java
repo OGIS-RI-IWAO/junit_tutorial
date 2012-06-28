@@ -25,6 +25,7 @@ public class IsDate extends BaseMatcher<Date> {
 		return new IsDate(yyyy, mm, dd);
 	}
 
+	@Override
 	public boolean matches(Object actual) {
 		this.actual = actual;
 		if(!(actual instanceof Date)) return false;
@@ -36,6 +37,7 @@ public class IsDate extends BaseMatcher<Date> {
 		return false;
 	}
 
+	@Override
 	public void describeTo(Description desc) {
 		desc.appendValue(yyyy + "/" + mm + "/" + dd);
 		if(actual != null) {
@@ -43,10 +45,5 @@ public class IsDate extends BaseMatcher<Date> {
 			desc.appendValue(new SimpleDateFormat("yyyy/mm/dd").format((Date)actual));
 		}
 	}
-	
-//	@Test
-//	public void testDate() {
-//		assertThat(new Date(), is(dateOf(2012, 1, 12)));
-//	}
 
 }

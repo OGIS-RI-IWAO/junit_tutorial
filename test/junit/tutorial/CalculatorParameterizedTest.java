@@ -2,6 +2,7 @@ package junit.tutorial;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import junit.rules.AssertionMessage;
 
 import org.junit.Assume;
 import org.junit.Rule;
@@ -66,9 +67,12 @@ public class CalculatorParameterizedTest {
 		};
 		@Rule
 		public ExpectedException exception = ExpectedException.none();
+		@Rule
+		public AssertionMessage message = new AssertionMessage();
 		@Theory
 		public void divideで除算結果を取得できること(Fixture fx) {
 			Assume.assumeTrue(fx.y != 0);
+			message.append("case: %d * %d = %d", fx.x, fx.y, fx.expected);
 			Calculator calc = new Calculator();
 			float expected = fx.expected;
 			float actual = calc.divide(fx.x, fx.y);
