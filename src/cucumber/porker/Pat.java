@@ -18,7 +18,7 @@ public abstract class Pat {
             if (entry.getValue() == 2)
                 return new OnePair(entry.getKey());
         }
-        // TODO 他の役の実装
+        // TODO
         return NO_PAIR;
     }
 
