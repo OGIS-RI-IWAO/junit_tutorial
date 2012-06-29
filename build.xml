@@ -20,7 +20,13 @@
         <pathelement location="cucumber-junit-1.0.8.jar"/>
         <pathelement location="gherkin-2.10.0.jar"/>
     </path>
-    <target name="init">
+	<target name="build-unitTest">
+	    <antcall target="clean" />
+	    <antcall target="compile" />
+	    <antcall target="create.jar" />
+	    <antcall target="unitTest" />
+	</target>
+	<target name="init">
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
             <fileset dir="src">
@@ -74,15 +80,31 @@
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>
-    <target name="除算メソッドのパラメータ化テスト">
+    <target name="ParameterizedMultiSameTypeParamsTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="junit.tutorial.CalculatorParameterizedTest.除算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>
-    <target name="IsDateExamples.dateOfの利用">
+    <target name="ParameterizedTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="ArrayListTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="junit.tutorial.ArrayListTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="IsDateExamples">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>

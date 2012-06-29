@@ -30,7 +30,7 @@ public abstract class Pat {
         OnePair(int no) {
             this.no = no;
         }
-        // hashCode,equalsメソッドは省略
+        // hashCode,equals
         @Override
         public int hashCode() {
             final int prime = 31;
