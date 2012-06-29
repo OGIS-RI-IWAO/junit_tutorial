@@ -4,7 +4,7 @@
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. -->
-<project basedir="." default="junitreport" name="junit_tutorial">
+<project basedir="." default="build" name="junit_tutorial">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../pleiades/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
@@ -43,11 +43,11 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" encoding="UTF-8" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
+        <javac debug="true" encoding="utf8" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
             <src path="src"/>
             <classpath refid="junit_tutorial.classpath"/>
         </javac>
-        <javac debug="true" encoding="UTF-8" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
+        <javac debug="true" encoding="utf8" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
             <src path="test"/>
             <classpath refid="junit_tutorial.classpath"/>
         </javac>
