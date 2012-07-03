@@ -9,9 +9,10 @@ public class CardTest {
 
 	@Test
 	public void testGetWithJUnit3() {
-		Card actual = Card.get('D', 1);
-		Card expected = new Card(Card.Suit.DIAMONDS, 1);
+		Card actual = Card.get('H', 13);
+		Card expected = new Card(Card.Suit.HEARTS, 13);
 		assertEquals(actual.suit, expected.suit);
+		assertEquals(actual.no, expected.no);
 	}
 	@Test
 	public void testGet() {

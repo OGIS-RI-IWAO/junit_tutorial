@@ -42,15 +42,51 @@ public class PokerGameStepDefs {
 	    assertThat(sut.pat(), is(expected));
 	}
 	
-	@ならば("^(\\d+)のスリーペアであるべき$")
-	public void のスリーペアであるべき(int no) throws Throwable {
-	    Pat expected = new Pat.ThreePair(no);
+//	@ならば("^(\\d+)と(\\d+)のツーペアであるべき$")
+//	public void のツーペアであるべき(int no1, int no2) throws Throwable {
+//	    Pat expected = new Pat.TwoPairs(no1, no2);
+//	    assertThat(sut.pat(), is(expected));
+//	}
+	
+	@ならば("^(\\d+)のスリーカードであるべき$")
+	public void のスリーカードであるべき(int no) throws Throwable {
+	    Pat expected = new Pat.ThreeCards(no);
 	    assertThat(sut.pat(), is(expected));
 	}
+	
+//	@ならば("^ストレートであるべき$")
+//	public void ストレートであるべき() throws Throwable {
+//	    Pat expected = new Pat.Straight();
+//	    assertThat(sut.pat(), is(expected));
+//	}
+	
+	@ならば("^フラッシュであるべき$")
+	public void フラッシュであるべき() throws Throwable {
+	    Pat expected = new Pat.Flash();
+	    assertThat(sut.pat(), is(expected));
+	}
+	
+//	@ならば("^(\\d+)と(\\d+)のフルハウスであるべき$")
+//	public void のフルハウスであるべき() throws Throwable {
+//	    Pat expected = new Pat.Fullhouse();
+//	    assertThat(sut.pat(), is(expected));
+//	}
 	
 	@ならば("^(\\d+)のフォーカードであるべき$")
 	public void フォーカードであるべき(int no) throws Throwable {
 	    Pat expected = new Pat.FourCards(no);
 	    assertThat(sut.pat(), is(expected));
 	}
+	
+//	@ならば("^ストレートフラッシュであるべき$")
+//	public void ストレートフラッシュであるべき() throws Throwable {
+//	    Pat expected = new Pat.StraightFlash();
+//	    assertThat(sut.pat(), is(expected));
+//	}
+	
+//	@ならば("^ロイヤルストレートフラッシュであるべき$")
+//	public void ロイヤルストレートフラッシュであるべき() throws Throwable {
+//	    Pat expected = new Pat.RoyalStraightFlash();
+//	    assertThat(sut.pat(), is(expected));
+//	}
 }

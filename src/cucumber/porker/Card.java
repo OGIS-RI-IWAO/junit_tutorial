@@ -11,7 +11,7 @@ public class Card {
 		this.no = no;
 	}
 	public static Card get(char suit, int no) {
-		if (no < 1 || 12 < no)
+		if (no < 1 || 13 < no)
 			throw new IllegalArgumentException();
 		switch (suit) {
 		case 'D':
