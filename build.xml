@@ -20,7 +20,7 @@
         <pathelement location="cucumber-junit-1.0.8.jar"/>
         <pathelement location="gherkin-2.10.0.jar"/>
     </path>
-	<target name="init">
+    <target name="init">
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
             <fileset dir="src">
@@ -66,7 +66,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="CalculatorParameterizedTest">
+    <target name="CalculatorParameterizedTest (1)">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -74,35 +74,31 @@
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>
-    <target name="ParameterizedMultiSameTypeParamsTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
-            <classpath refid="junit_tutorial.classpath"/>
-        </junit>
-    </target>
-    <target name="ParameterizedTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
-            <classpath refid="junit_tutorial.classpath"/>
-        </junit>
-    </target>
-    <target name="ArrayListTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="junit.tutorial.ArrayListTest" todir="${junit.output.dir}"/>
-            <classpath refid="junit_tutorial.classpath"/>
-        </junit>
-    </target>
-    <target name="IsDateExamples">
+    <target name="IsDateExamples.dateOfの利用">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="junit.matcher.IsDateExamples" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="junit_tutorial">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <test name="cucumber.porker.PorkerGameAcceptanceTest" todir="${junit.output.dir}"/>
+            <test name="junit.matcher.IsDateExamples" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ArrayListTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ArrayListTest$Helloが含まれる時" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ArrayListTest$初期状態の時" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.CalculatorParameterizedTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.CalculatorTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.TimeoutExampleTest" todir="${junit.output.dir}"/>
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>
@@ -111,6 +107,54 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="cucumber.porker.PorkerGameAcceptanceTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="除算メソッドのパラメータ化テスト">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="junit.tutorial.CalculatorParameterizedTest.除算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="CardTest.testGet">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="CardTest.testGetWithJUnit3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="CardTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="CardTest.illegalCard">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <classpath refid="junit_tutorial.classpath"/>
+        </junit>
+    </target>
+    <target name="CardTest.illegalSuit">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>
