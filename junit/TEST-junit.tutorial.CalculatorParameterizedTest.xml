@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="P1268606A" name="junit.tutorial.CalculatorParameterizedTest" tests="5" time="0.532" timestamp="2012-07-03T03:00:08">
+<testsuite errors="0" failures="0" hostname="P1268606A" name="junit.tutorial.CalculatorParameterizedTest" tests="5" time="0.192" timestamp="2012-07-03T04:11:23">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="ant.file.junit_tutorial" value="E:\dev\git\junit_tutorial\build.xml" />
@@ -28,7 +28,7 @@
     <property name="env.windows_tracing_flags" value="3" />
     <property name="sun.boot.library.path" value="E:\pleiades\java\6\bin" />
     <property name="env.MYSQL_HOME" value="C:\Program Files\MySQL\MySQL Server 5.1" />
-    <property name="ant.project.default-target" value="CalculatorParameterizedTest" />
+    <property name="ant.project.default-target" value="junit_tutorial" />
     <property name="ant.project.name" value="junit_tutorial" />
     <property name="java.version" value="1.6.0_31" />
     <property name="env.PROCESSOR_IDENTIFIER" value="x86 Family 6 Model 42 Stepping 7, GenuineIntel" />
@@ -91,7 +91,7 @@
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner junit.tutorial.CalculatorParameterizedTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\dev\git\junit_tutorial\junit\TEST-junit.tutorial.CalculatorParameterizedTest.xml crashfile=E:\dev\git\junit_tutorial\junitvmwatcher2354355650272261246.properties propsfile=E:\dev\git\junit_tutorial\junit4744066732717256785.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner junit.tutorial.CalculatorParameterizedTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\dev\git\junit_tutorial\junit\TEST-junit.tutorial.CalculatorParameterizedTest.xml crashfile=E:\dev\git\junit_tutorial\junitvmwatcher4376876945741918837.properties propsfile=E:\dev\git\junit_tutorial\junit4020250259433290425.properties" />
     <property name="java.class.path" value="E:\dev\git\junit_tutorial\build\classes;E:\dev\git\junit_tutorial\junit-4.10.jar;E:\dev\git\junit_tutorial\cucumber-core-1.0.8.jar;E:\dev\git\junit_tutorial\cucumber-html-0.2.1.jar;E:\dev\git\junit_tutorial\cucumber-java-1.0.8.jar;E:\dev\git\junit_tutorial\cucumber-junit-1.0.8.jar;E:\dev\git\junit_tutorial\gherkin-2.10.0.jar;E:\pleiades\eclipse\plugins\org.apache.ant_1.8.2.v20120109-1030\lib\ant-launcher.jar;E:\pleiades\eclipse\plugins\org.apache.ant_1.8.2.v20120109-1030\lib\ant.jar;E:\pleiades\eclipse\plugins\org.apache.ant_1.8.2.v20120109-1030\lib\ant-junit.jar;E:\pleiades\eclipse\plugins\org.apache.ant_1.8.2.v20120109-1030\lib\ant-junit4.jar" />
     <property name="env.READYAPPS" value="C:\SWTOOLS\ReadyApps" />
     <property name="env.TRACPATH" value="C:\TracLight\python;C:\TracLight\python\Scripts;C:\TracLight\CollabNetSVN;C:\TracLight\CollabNetSVN\httpd\bin;C:\TracLight\Graphviz\bin;C:\TracLight\maven\bin;C:\TracLight\bin" />
@@ -133,14 +133,14 @@
     <property name="env.COMMPath" value="C:\Program Files\Lenovo\Communications Utility" />
     <property name="env.USERDOMAIN" value="OGIS-RI" />
     <property name="java.specification.version" value="1.6" />
-    <property name="ant.project.invoked-targets" value="CalculatorParameterizedTest" />
+    <property name="ant.project.invoked-targets" value="junit_tutorial" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
-  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで乗算結果が取得できること" time="0.054" />
-  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで3と4の乗算結果が取得できること" time="0.0020" />
-  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで5と7の乗算結果が取得できること" time="0.0070" />
-  <testcase classname="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" name="divideで除算結果が取得できること" time="0.02" />
-  <testcase classname="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" name="divideの第２引数に0を指定した場合にはIllegalArgumentExceptionを送出する" time="0.041" />
+  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで乗算結果が取得できること" time="0.027" />
+  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで3と4の乗算結果が取得できること" time="0.0010" />
+  <testcase classname="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" name="multiplyで5と7の乗算結果が取得できること" time="0.0060" />
+  <testcase classname="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" name="divideで除算結果が取得できること" time="0.017" />
+  <testcase classname="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" name="divideの第２引数に0を指定した場合にはIllegalArgumentExceptionを送出する" time="0.0070" />
   <system-out><![CDATA[3 * 4 = 12
 5 * 7 = 35
 ]]></system-out>
