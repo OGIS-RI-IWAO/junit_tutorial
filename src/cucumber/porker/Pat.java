@@ -17,6 +17,10 @@ public abstract class Pat {
         for (Entry<Integer, Integer> entry : nums.entrySet()) {
             if (entry.getValue() == 2)
                 return new OnePair(entry.getKey());
+            if (entry.getValue() == 3)
+                return new ThreePair(entry.getKey());
+            if (entry.getValue() == 4)
+                return new FourCards(entry.getKey());
         }
         // TODO
         return NO_PAIR;
@@ -49,5 +53,55 @@ public abstract class Pat {
             return true;
         }
 
+    }
+    public static class ThreePair extends Pat {
+        public final int no;
+
+        ThreePair(int no) {
+            this.no = no;
+        }
+        // hashCode,equals
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + no;
+            return result;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null) return false;
+            if (getClass() != obj.getClass()) return false;
+            ThreePair other = (ThreePair) obj;
+            if (no != other.no) return false;
+            return true;
+        }
+    }
+    public static class FourCards extends Pat {
+        public final int no;
+
+        FourCards(int no) {
+            this.no = no;
+        }
+        // hashCode,equals
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + no;
+            return result;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null) return false;
+            if (getClass() != obj.getClass()) return false;
+            FourCards other = (FourCards) obj;
+            if (no != other.no) return false;
+            return true;
+        }
     }
 }

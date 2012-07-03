@@ -41,4 +41,16 @@ public class PokerGameStepDefs {
 	    Pat expected = new Pat.OnePair(no);
 	    assertThat(sut.pat(), is(expected));
 	}
+	
+	@ならば("^(\\d+)のスリーペアであるべき$")
+	public void のスリーペアであるべき(int no) throws Throwable {
+	    Pat expected = new Pat.ThreePair(no);
+	    assertThat(sut.pat(), is(expected));
+	}
+	
+	@ならば("^(\\d+)のフォーカードであるべき$")
+	public void フォーカードであるべき(int no) throws Throwable {
+	    Pat expected = new Pat.FourCards(no);
+	    assertThat(sut.pat(), is(expected));
+	}
 }
