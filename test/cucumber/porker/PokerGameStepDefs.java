@@ -42,11 +42,11 @@ public class PokerGameStepDefs {
 	    assertThat(sut.pat(), is(expected));
 	}
 	
-//	@ならば("^(\\d+)と(\\d+)のツーペアであるべき$")
-//	public void のツーペアであるべき(int no1, int no2) throws Throwable {
-//	    Pat expected = new Pat.TwoPairs(no1, no2);
-//	    assertThat(sut.pat(), is(expected));
-//	}
+	@ならば("^(\\d+)と(\\d+)のツーペアであるべき$")
+	public void のツーペアであるべき(int no1, int no2) throws Throwable {
+	    Pat expected = new Pat.TwoPairs(no1, no2);
+	    assertThat(sut.pat(), is(expected));
+	}
 	
 	@ならば("^(\\d+)のスリーカードであるべき$")
 	public void のスリーカードであるべき(int no) throws Throwable {
@@ -54,11 +54,11 @@ public class PokerGameStepDefs {
 	    assertThat(sut.pat(), is(expected));
 	}
 	
-//	@ならば("^ストレートであるべき$")
-//	public void ストレートであるべき() throws Throwable {
-//	    Pat expected = new Pat.Straight();
-//	    assertThat(sut.pat(), is(expected));
-//	}
+	@ならば("^ストレートであるべき$")
+	public void ストレートであるべき() throws Throwable {
+	    Pat expected = new Pat.Straight();
+	    assertThat(sut.pat(), is(expected));
+	}
 	
 	@ならば("^フラッシュであるべき$")
 	public void フラッシュであるべき() throws Throwable {
@@ -66,11 +66,11 @@ public class PokerGameStepDefs {
 	    assertThat(sut.pat(), is(expected));
 	}
 	
-//	@ならば("^(\\d+)と(\\d+)のフルハウスであるべき$")
-//	public void のフルハウスであるべき() throws Throwable {
-//	    Pat expected = new Pat.Fullhouse();
-//	    assertThat(sut.pat(), is(expected));
-//	}
+	@ならば("^(\\d+)と(\\d+)のフルハウスであるべき$")
+	public void のフルハウスであるべき(int no1, int no2) throws Throwable {
+	    Pat expected = new Pat.Fullhouse(no1, no2);
+	    assertThat(sut.pat(), is(expected));
+	}
 	
 	@ならば("^(\\d+)のフォーカードであるべき$")
 	public void フォーカードであるべき(int no) throws Throwable {
@@ -78,15 +78,15 @@ public class PokerGameStepDefs {
 	    assertThat(sut.pat(), is(expected));
 	}
 	
-//	@ならば("^ストレートフラッシュであるべき$")
-//	public void ストレートフラッシュであるべき() throws Throwable {
-//	    Pat expected = new Pat.StraightFlash();
-//	    assertThat(sut.pat(), is(expected));
-//	}
+	@ならば("^ストレートフラッシュであるべき$")
+	public void ストレートフラッシュであるべき() throws Throwable {
+	    Pat expected = new Pat.StraightFlash();
+	    assertThat(sut.pat(), is(expected));
+	}
 	
-//	@ならば("^ロイヤルストレートフラッシュであるべき$")
-//	public void ロイヤルストレートフラッシュであるべき() throws Throwable {
-//	    Pat expected = new Pat.RoyalStraightFlash();
-//	    assertThat(sut.pat(), is(expected));
-//	}
+	@ならば("^ロイヤルストレートフラッシュであるべき$")
+	public void ロイヤルストレートフラッシュであるべき() throws Throwable {
+	    Pat expected = new Pat.RoyalStraightFlash();
+	    assertThat(sut.pat(), is(expected));
+	}
 }

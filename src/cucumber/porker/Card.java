@@ -1,5 +1,7 @@
 package cucumber.porker;
 
+import java.util.Comparator;
+
 public class Card {
 	public enum Suit {
 		DIAMONDS, SPADES, HEARTS, CLUBS;
