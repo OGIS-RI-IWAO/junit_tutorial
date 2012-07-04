@@ -41,14 +41,14 @@ public abstract class Pat {
         }
         for (Entry<Card.Suit, Integer> entry : suits.entrySet()) {
             if (entry.getValue() == 5) {
-        		if(isRoyalStraightFlash(noList))
+        		if(isRoyalStraight(noList))
         			return new RoyalStraightFlash();
             	if(straightFlg)
             		return new StraightFlash();
                 return new Flash();
             }
         }
-        if(straightFlg) {
+        if(straightFlg || isRoyalStraight(noList)) {
         	return new Straight();
         }
         for (Entry<Integer, Integer> entry : nums.entrySet()) {
@@ -290,8 +290,8 @@ public abstract class Pat {
         }
     	return new ThreeCards(onePair.getKey());
     }
-    private static boolean isRoyalStraightFlash(List<Integer> noList) {
-    	boolean isRoyalStraightFlash = true;
+    private static boolean isRoyalStraight(List<Integer> noList) {
+    	boolean isRoyalStraight = true;
     	for(int i=0; i<noList.size(); i++) {
     		if(noList.get(i) == 1 ||
     				noList.get(i) == 10 ||
@@ -303,6 +303,6 @@ public abstract class Pat {
     			return false;
     		}
     	}
-    	return isRoyalStraightFlash;
+    	return isRoyalStraight;
     }
 }
