@@ -90,8 +90,6 @@
             <test name="junit.matcher.IsDateExamples" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.TimeoutExampleTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ArrayListTest" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.ArrayListTest$Helloが含まれる時" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.ArrayListTest$初期状態の時" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorParameterizedTest" todir="${junit.output.dir}"/>
