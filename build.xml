@@ -86,19 +86,20 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
-            <test name="cucumber.porker.PorkerGameAcceptanceTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.CalculatorTest" todir="${junit.output.dir}"/>
             <test name="junit.matcher.IsDateExamples" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.TimeoutExampleTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ArrayListTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ArrayListTest$Helloが含まれる時" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ArrayListTest$初期状態の時" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
+            <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorParameterizedTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorTest" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.TimeoutExampleTest" todir="${junit.output.dir}"/>
+            <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
+            <test name="cucumber.porker.PorkerGameAcceptanceTest" todir="${junit.output.dir}"/>
             <classpath refid="junit_tutorial.classpath"/>
         </junit>
     </target>

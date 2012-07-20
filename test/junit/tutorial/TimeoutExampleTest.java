@@ -9,6 +9,7 @@ public class TimeoutExampleTest {
 	public Timeout timeout = new Timeout(100);
 	@Test
 	public void test() throws Exception {
+		
 	}
 
 }

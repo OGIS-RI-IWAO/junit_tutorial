@@ -18,7 +18,6 @@ public class CalculatorTest {
 	@Test
 	public void multiplyで5と7の乗算結果が取得できること() {
 		Calculator calc = new Calculator();
-//		int expected = 12;
 		int expected = 35;
 		int actual = calc.multiply(5, 7);
 		assertThat(actual, is(expected));
@@ -37,15 +36,5 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.divide(5, 0);
 	}
-//
-//	@Test
-//	public void testMultiply() {
-//		fail("まだ実装されていません"); // TODO
-//	}
-//
-//	@Test
-//	public void testDivide() {
-//		fail("まだ実装されていません"); // TODO
-//	}
 
 }
