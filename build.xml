@@ -95,8 +95,6 @@
             <test name="junit.tutorial.ParameterizedMultiSameTypeParamsTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.ParameterizedTest" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorParameterizedTest" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.CalculatorParameterizedTest$乗算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
-            <test name="junit.tutorial.CalculatorParameterizedTest$除算メソッドのパラメータ化テスト" todir="${junit.output.dir}"/>
             <test name="junit.tutorial.CalculatorTest" todir="${junit.output.dir}"/>
             <test name="cucumber.porker.CardTest" todir="${junit.output.dir}"/>
             <test name="cucumber.porker.PorkerGameAcceptanceTest" todir="${junit.output.dir}"/>
