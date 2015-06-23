@@ -2,7 +2,6 @@ package junit.tutorial;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import junit.rules.AssertionMessage;
 
 import org.junit.Assume;
 import org.junit.Rule;
@@ -16,6 +15,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Enclosed.class)
 public class CalculatorParameterizedTest {
+
 	@RunWith(Theories.class)
 	public static class 乗算メソッドのパラメータ化テスト {
 		@DataPoint public static Fixture DATA1 = new Fixture(3, 4, 12);
@@ -37,7 +37,6 @@ public class CalculatorParameterizedTest {
 				this.expected = expected;
 			}
 		}
-		
 		
 		@Theory
 		public void multiplyで3と4の乗算結果が取得できること() {
@@ -74,6 +73,8 @@ public class CalculatorParameterizedTest {
         public void divideで除算結果が取得できること(Fixture fx) {
             Assume.assumeTrue(fx.y != 0);
             message.append("case: %d / %d = %f", fx.x, fx.y, fx.expected);
+            System.out.println(message.getMessage());
+            
             Calculator calc = new Calculator();
             float expected = fx.expected;
             float actual = calc.divide(fx.x, fx.y);
@@ -84,8 +85,10 @@ public class CalculatorParameterizedTest {
         public void divideの第２引数に0を指定した場合にはIllegalArgumentExceptionを送出する(Fixture fx) {
             Assume.assumeTrue(fx.y == 0);
             message.append("case: %d / %d > Exception", fx.x, fx.y);
-            exception.expect(IllegalArgumentException.class);
+            System.out.println(message.getMessage());
+            
             Calculator calc = new Calculator();
+            exception.expect(IllegalArgumentException.class);
             calc.divide(fx.x, fx.y);
         }
 

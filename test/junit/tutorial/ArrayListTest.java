@@ -17,7 +17,7 @@ public class ArrayListTest {
 		
 		@Before
 		public void setUp() throws Exception {
-			sut = new ArrayList<String>();
+			sut = new ArrayList<>();
 		}
 		
 		@Test
@@ -38,7 +38,7 @@ public class ArrayListTest {
 		
 		@Before
 		public void setUp() throws Exception {
-			sut = new ArrayList<String>();
+			sut = new ArrayList<>();
 			sut.add("Hello");
 		}
 		
