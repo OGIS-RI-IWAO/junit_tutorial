@@ -20,15 +20,36 @@ public class CalculatorParameterizedTest {
 	public static class 乗算メソッドのパラメータ化テスト {
 		@DataPoint public static Fixture DATA1 = new Fixture(3, 4, 12);
 		@DataPoint public static Fixture DATA2 = new Fixture(5, 7, 35);
+		@DataPoint public static Fixture DATA3 = new Fixture(0, 9, 0);
+
 		@Theory
 		public void multiplyで乗算結果が取得できること(Fixture fx) {
+			// 3番目のFixtureは実行されない
 			Assume.assumeTrue(fx.x != 0);
+			
 			System.out.println(fx.x + " * " + fx.y + " = " + fx.expected);
+
 			Calculator calc = new Calculator();
 			int expected = fx.expected;
 			int actual = calc.multiply(fx.x, fx.y);
+
 			assertThat(actual, is(expected));
 		}
+
+		@Theory
+		public void 数値0による乗算はすべて0の結果となる(Fixture fx) {
+			// 3番目のFixtureのみ実行される
+			Assume.assumeTrue(fx.x == 0 || fx.y == 0);
+			
+			System.out.println(fx.x + " * " + fx.y + " = " + fx.expected);
+
+			Calculator calc = new Calculator();
+			int expected = fx.expected;
+			int actual = calc.multiply(fx.x, fx.y);
+
+			assertThat(actual, is(expected));
+		}
+
 		static class Fixture {
 			int x, y, expected;
 			public Fixture(int x, int y, int expected) {
@@ -38,6 +59,9 @@ public class CalculatorParameterizedTest {
 			}
 		}
 		
+		/**
+		 * これはFixtureを利用していない
+		 */
 		@Theory
 		public void multiplyで3と4の乗算結果が取得できること() {
 			Calculator calc = new Calculator();
@@ -46,6 +70,9 @@ public class CalculatorParameterizedTest {
 			assertThat(actual, is(expected));
 		}
 		
+		/**
+		 * これはFixtureを利用していない
+		 */
 		@Theory
 		public void multiplyで5と7の乗算結果が取得できること() {
 			Calculator calc = new Calculator();

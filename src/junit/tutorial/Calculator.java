@@ -7,7 +7,7 @@ public class Calculator {
 	}
 	
 	public float divide(int x, int y) {
-		if(y == 0) throw new IllegalArgumentException();
+		if(x == 0 || y == 0) throw new IllegalArgumentException();
 		return (float)x / (float)y;
 	}
 

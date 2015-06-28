@@ -36,5 +36,11 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.divide(5, 0);
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void divideで第1引数に0を設定した場合にはilleagalArgumentExceptionを送出する() {
+		Calculator calc = new Calculator();
+		calc.divide(0, 5);
+	}
 
 }

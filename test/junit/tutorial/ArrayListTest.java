@@ -12,6 +12,20 @@ import org.junit.runner.RunWith;
 
 @RunWith(Enclosed.class)
 public class ArrayListTest {
+	
+	public ArrayListTest() {
+		// Enclosed test runnerだとテストクラスコンストラクタは実行されない？
+		System.out.println("初期化");
+	}
+	
+	/**
+	 * これは実行されない
+	 */
+	@Test
+	public void test() {
+		System.out.println("test");
+	}
+	
 	public static class 初期状態の時 {
 		private ArrayList<String> sut;
 		
@@ -29,10 +43,11 @@ public class ArrayListTest {
 		@Test
 		public void addでHelloを追加するとget0はHelloを返す() {
 			sut.add("Hello");
+			assertThat(sut.size(), is(1));
 			assertThat(sut.get(0), is("Hello"));
 		}
-		
 	}
+	
 	public static class Helloが含まれる時 {
 		private ArrayList<String> sut;
 		
@@ -49,14 +64,10 @@ public class ArrayListTest {
 		}
 		
 		@Test
-		public void addでWorldを追加するとget0はHelloを返す() throws Exception {
+		public void addでWorldを追加するとget0はHelloをget1はWorldを返す() throws Exception {
 			sut.add("World");
+			assertThat(sut.size(), is(2));
 			assertThat(sut.get(0), is("Hello"));
-		}
-		
-		@Test
-		public void addでWorldを追加するとget1はWorldを返す() throws Exception {
-			sut.add("World");
 			assertThat(sut.get(1), is("World"));
 		}
 		
