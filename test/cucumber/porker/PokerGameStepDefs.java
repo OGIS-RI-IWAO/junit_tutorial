@@ -5,6 +5,16 @@ import static org.junit.Assert.assertThat;
 import cucumber.annotation.ja.ならば;
 import cucumber.annotation.ja.もし;
 import cucumber.annotation.ja.前提;
+import cucumber.porker.pat.Flash;
+import cucumber.porker.pat.FourCards;
+import cucumber.porker.pat.Fullhouse;
+import cucumber.porker.pat.OnePair;
+import cucumber.porker.pat.Pat;
+import cucumber.porker.pat.RoyalStraightFlash;
+import cucumber.porker.pat.Straight;
+import cucumber.porker.pat.StraightFlash;
+import cucumber.porker.pat.ThreeCards;
+import cucumber.porker.pat.TwoPairs;
 
 public class PokerGameStepDefs {
 

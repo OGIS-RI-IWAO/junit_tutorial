@@ -1,9 +1,9 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
-public class OnePair extends Pat {
+public class ThreeCards extends Pat {
 	public final int no;
 
-	OnePair(int no) {
+	public ThreeCards(int no) {
 		this.no = no;
 	}
 
@@ -24,10 +24,9 @@ public class OnePair extends Pat {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		OnePair other = (OnePair) obj;
+		ThreeCards other = (ThreeCards) obj;
 		if (no != other.no)
 			return false;
 		return true;
 	}
-
 }

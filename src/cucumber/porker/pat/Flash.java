@@ -1,18 +1,12 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
-public class ThreeCards extends Pat {
-	public final int no;
-
-	ThreeCards(int no) {
-		this.no = no;
-	}
-
+public class Flash extends Pat {
 	// hashCode,equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + no;
+		result = prime * result + 40;
 		return result;
 	}
 
@@ -23,9 +17,6 @@ public class ThreeCards extends Pat {
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
-			return false;
-		ThreeCards other = (ThreeCards) obj;
-		if (no != other.no)
 			return false;
 		return true;
 	}

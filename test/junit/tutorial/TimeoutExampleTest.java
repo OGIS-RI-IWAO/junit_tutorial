@@ -19,6 +19,7 @@ public class TimeoutExampleTest {
 
 	@Test(expected=Exception.class)
 	public void test_200millis() throws Exception {
+		exception.expect(Exception.class);
 		Thread.sleep(200);
 	}
 

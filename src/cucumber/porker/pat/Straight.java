@@ -1,12 +1,12 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
-public class RoyalStraightFlash extends Pat {
+public class Straight extends Pat {
 	// hashCode,equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + 60;
+		result = prime * result + 30;
 		return result;
 	}
 

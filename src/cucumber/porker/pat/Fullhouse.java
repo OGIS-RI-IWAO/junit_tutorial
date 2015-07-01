@@ -1,10 +1,10 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
 public class Fullhouse extends Pat {
 	public final int no1;
 	public final int no2;
 
-	Fullhouse(int no1, int no2) {
+	public Fullhouse(int no1, int no2) {
 		this.no1 = no1;
 		this.no2 = no2;
 	}

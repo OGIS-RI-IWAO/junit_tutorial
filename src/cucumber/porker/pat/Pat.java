@@ -1,4 +1,4 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
+
+import cucumber.porker.Card;
+import cucumber.porker.Hands;
 
 public abstract class Pat {
 	public static final Pat NO_PAIR = new NoPair();

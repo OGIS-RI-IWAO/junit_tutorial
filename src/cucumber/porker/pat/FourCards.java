@@ -1,12 +1,18 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
-public class Straight extends Pat {
+public class FourCards extends Pat {
+	public final int no;
+
+	public FourCards(int no) {
+		this.no = no;
+	}
+
 	// hashCode,equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + 30;
+		result = prime * result + no;
 		return result;
 	}
 
@@ -17,6 +23,9 @@ public class Straight extends Pat {
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
+			return false;
+		FourCards other = (FourCards) obj;
+		if (no != other.no)
 			return false;
 		return true;
 	}

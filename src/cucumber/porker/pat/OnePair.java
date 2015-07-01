@@ -1,12 +1,10 @@
-package cucumber.porker;
+package cucumber.porker.pat;
 
-public class TwoPairs extends Pat {
-	public final int no1;
-	public final int no2;
+public class OnePair extends Pat {
+	public final int no;
 
-	TwoPairs(int no1, int no2) {
-		this.no1 = no1;
-		this.no2 = no2;
+	public OnePair(int no) {
+		this.no = no;
 	}
 
 	// hashCode,equals
@@ -14,7 +12,7 @@ public class TwoPairs extends Pat {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + no1 + no2;
+		result = prime * result + no;
 		return result;
 	}
 
@@ -26,11 +24,10 @@ public class TwoPairs extends Pat {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TwoPairs other = (TwoPairs) obj;
-		if (no1 != other.no1)
-			return false;
-		if (no2 != other.no2)
+		OnePair other = (OnePair) obj;
+		if (no != other.no)
 			return false;
 		return true;
 	}
+
 }

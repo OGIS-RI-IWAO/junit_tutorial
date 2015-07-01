@@ -1,7 +1,8 @@
 package cucumber.porker;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ public class CardTest {
 		assertEquals(actual.suit, expected.suit);
 		assertEquals(actual.no, expected.no);
 	}
+
 	@Test
 	public void testGet() {
 		Card actual = Card.get('D', 1);
@@ -21,15 +23,18 @@ public class CardTest {
 		assertThat(actual.suit, is(expected.suit));
 		assertThat(actual.no, is(expected.no));
 	}
-	@Test(expected=IllegalArgumentException.class)
+
+	@Test(expected = IllegalArgumentException.class)
 	public void illegalCard0() {
 		Card.get('D', 0);
 	}
-	@Test(expected=IllegalArgumentException.class)
+
+	@Test(expected = IllegalArgumentException.class)
 	public void illegalCard14() {
 		Card.get('D', 14);
 	}
-	@Test(expected=IllegalArgumentException.class)
+
+	@Test(expected = IllegalArgumentException.class)
 	public void illegalSuit() {
 		Card.get('X', 14);
 	}
