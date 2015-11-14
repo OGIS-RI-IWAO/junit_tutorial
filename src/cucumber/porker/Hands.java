@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class Hands implements Iterable<Card> {
 	private static final int SIZE = 5;
-	private final Set<Card> hands = new HashSet<Card>(SIZE);
+	private final Set<Card> hands = new HashSet<>(SIZE);
 
 	public Hands(Card... cards) {
 		if (!isCorrectCardsNumber(cards.length))
